@@ -2,21 +2,29 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+ <!-- Bootstrap CDN -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+ <!-- Owl-carousel CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+
+ <!-- font awesome icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+ 
+<style>
 body {
   background-color: #f1f1f1;
-  padding: 20px;
+  
   font-family: Arial;
 }
 
 /* Center website */
 .main {
   max-width: 1000px;
-  margin: auto;
+padding: 20px;  
+box-sizing: border-box;
 }
 
 h1 {
@@ -99,17 +107,77 @@ flex:0.8;/*change accordingly */
   background-color: #666;
   color: white;
 }
+/*Header Styles*/
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 10px 0;
+  background: rgb(29, 34, 44);
+}
+
+#header.header-scrolled {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #1c5c93;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
 </style>
 </head>
 <body>
 
 <!-- MAIN (Center website) -->
+<header id="header">
+  <div class="container">
+
+    <div class="logo float-left">
+      <h1 class="text-light" ><a href="../index.html" style="color:white">Dream</a> </h1>
+
+    </div>
+
+    <!--nav-->
+    <nav class="nav-menu float-right d-none d-lg-block">
+      <ul>
+        <!--<li class="active" style="color:white"><a href="Website-jewellary-Showroom/index.html">Home</a></li>
+        <li><a href="#about" style="color:white">About Us</a></li>
+        <li><a href="#collection1" style="color:white">Trending</a></li>
+        <li><a href="#history" style="color:white">History</a></li>
+        <li><a href="#collection-flters" style="color:white">Collection</a></li>
+        <li><a href="./contact.html" style="color:white" target="_blank">Contact Us</a></li>
+        <li style="margin-left: 200px;"><a href="./signin/form1.html" target="_blank" style="color:white"> <i class="fas fa-user-plus"></i> </a></li>
+        <li><a href="../cart&product_details/cart.html" target="_blank" style="color:white"><i class="fas fa-luggage-cart"></i></a></li>-->
+
+
+      </ul>
+    </nav><!-- .nav-menu -->
+  </div>
+</header><!-- End Header -->
+
 <div class="main">
 
-<h1>Dream Jewellers</h1>
-<hr>
 
-<h2>Jewellery</h2>
+
+
 <div class="maincontainer">
 <div id="myBtnContainer" class="btncontainer">
   <button class="btn active" onclick="filterSelection('all')">All Jewellery</button>
@@ -192,6 +260,7 @@ flex:0.8;/*change accordingly */
 <!-- END MAIN -->
 </div>
 </div>
+ 
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -237,6 +306,49 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
+<!--Footer-->
+ <footer id="footer" style="margin-top: 20%;margin: 0px;width: 100%;" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-12">
+        <h4 class="font-rubik font-size-20">Dream jewellery shop</h4>
+        <p class="font-size-14 font-rale text-white-50">Dream Jewellers is more than jewellery… </p>
+      </div>
+      <div class="col-lg-4 col-12">
+        <h4 class="font-rubik font-size-20">Newsletter</h4>
+        <form class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Email *">
+          </div>
+          <div class="col">
+            <button type="submit" style="width:120px;height:70px;background-color: rgb(51, 135, 214);" class="btn btn-primary mb-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-2 col-12">
+        <h4 class="font-rubik font-size-20">Information</h4>
+        <div class="d-flex flex-column flex-wrap">
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">About Us</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Delivery Information</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Privacy Policy</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Terms & Conditions</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-12">
+        <h4 class="font-rubik font-size-20">Account</h4>
+        <div class="d-flex flex-column flex-wrap">
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">My Account</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Order History</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Wish List</a>
+          <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Newsletters</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="copyright text-center bg-dark text-white py-2">
+  <p class="font-rale font-size-14">&copy; Dream Jewellers Copyrights 2020.<br> Designed By <a href="#" class="color-second">Shamindra Sen</a></p>
+</div>
 
 </body>
 </html>
